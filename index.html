@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#" aria-label="My Home Bookkeeping">
-          <span class="brand-icon" aria-hidden="true"></span>
-          <span class="brand-name">My Home Bookkeeping</span>
+          <img class="brand-icon" src="assets/app-icon-512.png" alt="">
         </a>
 
         <nav class="main-nav" aria-label="Основное меню">
@@ -20,36 +19,151 @@
         </nav>
 
         <a class="download-button" href="#" aria-label="Скачать приложение в Google Play">
-          <span class="play-icon" aria-hidden="true"></span>
-          <span>Скачать</span>
-        </a>
-
-        <div class="header-actions" aria-label="Настройки сайта">
-          <button class="icon-button theme-toggle" type="button" aria-label="Переключить цветовую схему">
-            <span aria-hidden="true">☀</span>
-          </button>
-          <button class="language-button" type="button" aria-label="Выбрать язык">
-            RU
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="page">
-      <section class="intro" aria-labelledby="site-title">
-        <p class="eyebrow">My Home Bookkeeping</p>
-        <h1 id="site-title">Сайт в разработке</h1>
-        <p>Приносим извинения. Мы готовим официальный сайт приложения.</p>
-        <a class="store-badge" href="#" aria-label="Приложение уже в Google Play">
-          <svg class="store-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <svg class="google-play-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path fill="#00A0FF" d="M5.4 3.3c-.5.5-.8 1.2-.8 2.1v21.2c0 .8.3 1.6.8 2.1l.1.1 12-12v-.3L5.5 3.2l-.1.1Z"/>
             <path fill="#00F076" d="m21.4 20.7-4-4v-.3l4-4 .1.1 4.8 2.7c1.4.8 1.4 2 0 2.8l-4.8 2.7h-.1Z"/>
             <path fill="#FFCE00" d="m21.5 20.6-4.1-4.1L5.4 28.7c.8.9 2.1 1 3.6.2l12.5-8.3Z"/>
             <path fill="#FF3A44" d="M21.5 12.4 9 4.1C7.6 3.3 6.2 3.4 5.4 4.3l12 12.2 4.1-4.1Z"/>
           </svg>
-          <span>Приложение уже в Google Play</span>
         </a>
-      </section>
+
+        <div class="header-actions" aria-label="Настройки сайта">
+          <button class="theme-switch" type="button" aria-label="Переключить на темную тему" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">☾</span>
+            <span class="theme-thumb" aria-hidden="true"></span>
+            <span class="theme-icon" aria-hidden="true">☀</span>
+          </button>
+
+          <div class="language-switcher" aria-label="Выбор языка">
+            <button class="language-button is-active" type="button" data-language="ru" aria-pressed="true">Русский</button>
+            <button class="language-button" type="button" data-language="en" aria-pressed="false">
+              <span aria-hidden="true">🇬🇧</span>
+              English
+            </button>
+            <button class="language-button" type="button" data-language="pl" aria-pressed="false">
+              <span aria-hidden="true">🇵🇱</span>
+              Polski
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <article class="content-panel" aria-labelledby="content-title">
+        <h1 id="content-title" data-i18n="title">Для чего существует приложение</h1>
+
+        <p data-i18n="paragraph1"><strong>My Home Bookkeeping</strong> — приложение для <strong>домашней бухгалтерии, учёта доходов и расходов, личных финансов и семейного бюджета</strong>. Оно помогает понять, куда на самом деле уходят деньги и на что тратится бюджет.</p>
+
+        <p data-i18n="paragraph2">Мы ежедневно совершаем множество небольших покупок и платежей, которые быстро забываются. <strong>Расходы на продукты, транспорт, автомобиль, коммунальные услуги, подписки, развлечения и повседневные покупки</strong> по отдельности могут казаться небольшими, но за месяц превращаются в заметную сумму.</p>
+
+        <p data-i18n="paragraph3">Приложение позволяет быстро <strong>записывать расходы и доходы</strong>, вести <strong>учёт денег и личного бюджета</strong>, контролировать счета и просматривать историю платежей. Отчёты по категориям помогают увидеть, <strong>сколько денег потрачено за месяц, на что уходит больше всего денег и какие расходы постоянно повторяются</strong>.</p>
+
+        <p data-i18n="paragraph4">Главная цель My Home Bookkeeping — не просто вести <strong>бухгалтерию в телефоне</strong>, а дать удобный инструмент для <strong>контроля расходов, ведения домашнего бюджета и анализа личных финансов</strong>, который помогает находить незаметные <strong>«дыры» в бюджете</strong>.</p>
+
+        <h2 data-i18n="subtitle">Сайт развивается вместе с приложением</h2>
+
+        <p data-i18n="paragraph5">Сайт <strong>My Home Bookkeeping</strong> только начинает развиваться. Скоро здесь появится <strong>история создания и развития приложения</strong>, рассказ о том, <strong>почему и для чего оно было создано</strong>, подробные <strong>описания и разъяснения функций</strong>, примеры использования и советы по работе с приложением.</p>
+
+        <p data-i18n="paragraph6">Здесь также будут публиковаться <strong>история версий и обновлений, планы дальнейшего развития, новые возможности</strong>, а также материалы об <strong>учёте расходов, контроле личных финансов и анализе домашнего бюджета</strong>.</p>
+
+        <p data-i18n="paragraph7">Приложение продолжает развиваться — вместе с ним будет развиваться и этот сайт.</p>
+
+        <p class="store-copy" data-i18n="storeCopy"><strong>My Home Bookkeeping можно скачать и установить из Google Play:</strong></p>
+        <a class="store-badge" href="#" data-i18n-aria="storeAria" aria-label="Скачать My Home Bookkeeping в Google Play">
+          <svg class="google-play-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <path fill="#00A0FF" d="M5.4 3.3c-.5.5-.8 1.2-.8 2.1v21.2c0 .8.3 1.6.8 2.1l.1.1 12-12v-.3L5.5 3.2l-.1.1Z"/>
+            <path fill="#00F076" d="m21.4 20.7-4-4v-.3l4-4 .1.1 4.8 2.7c1.4.8 1.4 2 0 2.8l-4.8 2.7h-.1Z"/>
+            <path fill="#FFCE00" d="m21.5 20.6-4.1-4.1L5.4 28.7c.8.9 2.1 1 3.6.2l12.5-8.3Z"/>
+            <path fill="#FF3A44" d="M21.5 12.4 9 4.1C7.6 3.3 6.2 3.4 5.4 4.3l12 12.2 4.1-4.1Z"/>
+          </svg>
+          <span data-i18n="storeBadge">Скачать My Home Bookkeeping в Google Play</span>
+        </a>
+      </article>
     </main>
+
+    <script>
+      const translations = {
+        ru: {
+          title: 'Для чего существует приложение',
+          paragraph1: '<strong>My Home Bookkeeping</strong> — приложение для <strong>домашней бухгалтерии, учёта доходов и расходов, личных финансов и семейного бюджета</strong>. Оно помогает понять, куда на самом деле уходят деньги и на что тратится бюджет.',
+          paragraph2: 'Мы ежедневно совершаем множество небольших покупок и платежей, которые быстро забываются. <strong>Расходы на продукты, транспорт, автомобиль, коммунальные услуги, подписки, развлечения и повседневные покупки</strong> по отдельности могут казаться небольшими, но за месяц превращаются в заметную сумму.',
+          paragraph3: 'Приложение позволяет быстро <strong>записывать расходы и доходы</strong>, вести <strong>учёт денег и личного бюджета</strong>, контролировать счета и просматривать историю платежей. Отчёты по категориям помогают увидеть, <strong>сколько денег потрачено за месяц, на что уходит больше всего денег и какие расходы постоянно повторяются</strong>.',
+          paragraph4: 'Главная цель My Home Bookkeeping — не просто вести <strong>бухгалтерию в телефоне</strong>, а дать удобный инструмент для <strong>контроля расходов, ведения домашнего бюджета и анализа личных финансов</strong>, который помогает находить незаметные <strong>«дыры» в бюджете</strong>.',
+          subtitle: 'Сайт развивается вместе с приложением',
+          paragraph5: 'Сайт <strong>My Home Bookkeeping</strong> только начинает развиваться. Скоро здесь появится <strong>история создания и развития приложения</strong>, рассказ о том, <strong>почему и для чего оно было создано</strong>, подробные <strong>описания и разъяснения функций</strong>, примеры использования и советы по работе с приложением.',
+          paragraph6: 'Здесь также будут публиковаться <strong>история версий и обновлений, планы дальнейшего развития, новые возможности</strong>, а также материалы об <strong>учёте расходов, контроле личных финансов и анализе домашнего бюджета</strong>.',
+          paragraph7: 'Приложение продолжает развиваться — вместе с ним будет развиваться и этот сайт.',
+          storeCopy: '<strong>My Home Bookkeeping можно скачать и установить из Google Play:</strong>',
+          storeBadge: 'Скачать My Home Bookkeeping в Google Play',
+          storeAria: 'Скачать My Home Bookkeeping в Google Play'
+        },
+        en: {
+          title: 'What is the app for?',
+          paragraph1: '<strong>My Home Bookkeeping</strong> is an app for <strong>home bookkeeping, tracking income and expenses, managing personal finances, and keeping a household budget</strong>. It helps you understand where your money really goes and what you spend your budget on.',
+          paragraph2: 'Every day, we make many small purchases and payments that are quickly forgotten. <strong>Expenses for groceries, transportation, cars, utility bills, subscriptions, entertainment, and everyday purchases</strong> may seem insignificant on their own, but over a month they can add up to a considerable amount.',
+          paragraph3: 'The app lets you quickly <strong>record expenses and income</strong>, keep track of <strong>your money and household budget</strong>, manage accounts, and view your payment history. Reports by category help you see <strong>how much you have spent during the month, where most of your money goes, and which expenses keep recurring</strong>.',
+          paragraph4: 'The main purpose of My Home Bookkeeping is not simply to provide <strong>bookkeeping on your phone</strong>, but to offer a convenient tool for <strong>expense tracking, household budget management, and personal finance analysis</strong> that helps you discover unnoticed <strong>“holes” in your budget</strong>.',
+          subtitle: 'The website grows with the app',
+          paragraph5: 'The <strong>My Home Bookkeeping</strong> website is only beginning to grow. Soon you will find the <strong>story of how the app was created and developed</strong>, an explanation of <strong>why and for what purpose it was created</strong>, detailed <strong>descriptions and explanations of its features</strong>, practical examples, and tips for using the app.',
+          paragraph6: 'We will also publish the <strong>version and update history, future development plans, and information about new features</strong>, as well as materials about <strong>expense tracking, personal finance management, and household budget analysis</strong>.',
+          paragraph7: 'The app continues to evolve — and this website will grow along with it.',
+          storeCopy: '<strong>You can download and install My Home Bookkeeping from Google Play:</strong>',
+          storeBadge: 'Download My Home Bookkeeping on Google Play',
+          storeAria: 'Download My Home Bookkeeping on Google Play'
+        },
+        pl: {
+          title: 'Do czego służy aplikacja',
+          paragraph1: '<strong>My Home Bookkeeping</strong> to aplikacja do <strong>prowadzenia budżetu domowego, ewidencji przychodów i wydatków, zarządzania finansami osobistymi i budżetem rodzinnym</strong>. Pomaga zrozumieć, na co naprawdę wydawane są pieniądze i gdzie znika domowy budżet.',
+          paragraph2: 'Każdego dnia dokonujemy wielu drobnych zakupów i płatności, o których szybko zapominamy. <strong>Wydatki na żywność, transport, samochód, rachunki, subskrypcje, rozrywkę i codzienne zakupy</strong> osobno mogą wydawać się niewielkie, ale w ciągu miesiąca potrafią zamienić się w znaczną kwotę.',
+          paragraph3: 'Aplikacja pozwala szybko <strong>zapisywać wydatki i przychody</strong>, prowadzić <strong>kontrolę finansów i budżetu domowego</strong>, zarządzać kontami oraz przeglądać historię płatności. Raporty według kategorii pomagają zobaczyć, <strong>ile pieniędzy zostało wydanych w ciągu miesiąca, na co wydajemy najwięcej i które wydatki regularnie się powtarzają</strong>.',
+          paragraph4: 'Głównym celem My Home Bookkeeping nie jest tylko prowadzenie <strong>domowej księgowości w telefonie</strong>, ale zapewnienie wygodnego narzędzia do <strong>kontroli wydatków, prowadzenia budżetu domowego i analizy finansów osobistych</strong>, które pomaga odnaleźć niezauważalne <strong>„dziury” w budżecie</strong>.',
+          subtitle: 'Strona rozwija się razem z aplikacją',
+          paragraph5: 'Strona <strong>My Home Bookkeeping</strong> dopiero zaczyna się rozwijać. Wkrótce pojawi się tutaj <strong>historia powstania i rozwoju aplikacji</strong>, informacje o tym, <strong>dlaczego i w jakim celu została stworzona</strong>, szczegółowe <strong>opisy i wyjaśnienia funkcji</strong>, przykłady zastosowania oraz wskazówki dotyczące korzystania z aplikacji.',
+          paragraph6: 'Będziemy również publikować <strong>historię wersji i aktualizacji, plany dalszego rozwoju oraz informacje o nowych funkcjach</strong>, a także materiały dotyczące <strong>kontroli wydatków, finansów osobistych i analizy budżetu domowego</strong>.',
+          paragraph7: 'Aplikacja stale się rozwija — razem z nią będzie rozwijać się również ta strona.',
+          storeCopy: '<strong>My Home Bookkeeping można pobrać i zainstalować z Google Play:</strong>',
+          storeBadge: 'Pobierz My Home Bookkeeping z Google Play',
+          storeAria: 'Pobierz My Home Bookkeeping z Google Play'
+        }
+      };
+
+      const root = document.documentElement;
+      const themeSwitch = document.querySelector('.theme-switch');
+      const languageButtons = document.querySelectorAll('[data-language]');
+
+      function setTheme(theme) {
+        root.dataset.theme = theme;
+        themeSwitch.setAttribute('aria-pressed', theme === 'dark');
+        themeSwitch.setAttribute('aria-label', theme === 'dark' ? 'Переключить на светлую тему' : 'Переключить на темную тему');
+      }
+
+      function setLanguage(language) {
+        const dictionary = translations[language];
+        root.lang = language;
+
+        document.querySelectorAll('[data-i18n]').forEach((element) => {
+          element.innerHTML = dictionary[element.dataset.i18n];
+        });
+
+        document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+          element.setAttribute('aria-label', dictionary[element.dataset.i18nAria]);
+        });
+
+        languageButtons.forEach((button) => {
+          const isActive = button.dataset.language === language;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-pressed', isActive);
+        });
+      }
+
+      themeSwitch.addEventListener('click', () => {
+        setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+      });
+
+      languageButtons.forEach((button) => {
+        button.addEventListener('click', () => setLanguage(button.dataset.language));
+      });
+    </script>
   </body>
 </html>
