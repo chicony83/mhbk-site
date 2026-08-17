@@ -8,6 +8,7 @@
 - Provide Google Play entry points in the header and page body.
 - Keep the menu placeholder ready for future navigation sections.
 - Support light and dark theme switching on the static page.
+- Include baseline SEO keywords in Russian, Polish, and English.
 
 ## Next Steps
 
@@ -18,6 +19,6 @@
 
 ## Later
 
-- Add production metadata for social previews and search engines.
+- Add production metadata for social previews and richer search snippets.
 - Add responsive app screenshots and store assets.
 - Review accessibility, mobile layout, and GitHub Pages publishing.
