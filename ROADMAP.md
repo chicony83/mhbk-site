@@ -2,19 +2,19 @@
 
 ## Current Stage
 
-- Add a temporary one-page website for My Home Bookkeeping.
-- Show that the website is under development.
-- Provide a visible Google Play availability badge.
-- Keep the header structure ready for future sections, language switching, and theme switching.
+- Maintain a temporary one-page website for My Home Bookkeeping.
+- Show the app purpose text in Russian, English, and Polish.
+- Use the official app icon in the header.
+- Provide Google Play entry points in the header and page body.
+- Keep the menu placeholder ready for future navigation sections.
+- Support light and dark theme switching on the static page.
 
 ## Next Steps
 
-- Replace the temporary header icon with the official app icon.
 - Add the real Google Play application link.
-- Implement light and dark theme switching.
-- Add language switching for Russian and English.
 - Replace the menu placeholder with real navigation sections.
-- Add the first full landing-page content blocks: app value, screenshots, privacy, FAQ, and support contacts.
+- Add localized content for screenshots, privacy, FAQ, and support contacts.
+- Persist the selected theme and language between visits.
 
 ## Later
 
