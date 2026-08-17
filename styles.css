@@ -177,38 +177,45 @@ button {
   transform: translateX(38px);
 }
 
-.language-switcher {
+.language-field {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px;
+}
+
+.language-field::after {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  right: 12px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  color: var(--text-secondary);
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.language-select {
+  min-width: 116px;
+  height: 38px;
+  padding: 0 32px 0 12px;
   border: 1px solid color-mix(in srgb, var(--border) 30%, transparent);
   border-radius: 8px;
   background: var(--surface-muted);
-}
-
-.language-button {
-  min-height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 0 10px;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   cursor: pointer;
+  font: inherit;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0;
+  appearance: none;
 }
 
-.language-button.is-active,
-.language-button:hover,
-.language-button:focus-visible {
+.language-select:hover,
+.language-select:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 48%, transparent);
   background: var(--surface);
-  color: var(--text-primary);
 }
 
 .page {
@@ -306,9 +313,10 @@ button {
     grid-column: 3;
   }
 
-  .language-button {
-    min-height: 30px;
-    padding: 0 8px;
+  .language-select {
+    min-width: 108px;
+    height: 36px;
+    padding-left: 10px;
     font-size: 12px;
   }
 
@@ -353,12 +361,7 @@ button {
     transform: translateX(34px);
   }
 
-  .language-switcher {
-    gap: 2px;
-    padding: 3px;
-  }
-
-  .language-button {
-    padding: 0 6px;
+  .language-select {
+    min-width: 104px;
   }
 }

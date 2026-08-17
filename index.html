@@ -16,10 +16,10 @@
         </a>
 
         <nav class="main-nav" aria-label="Основное меню">
-          <a href="#">Меню</a>
+          <a href="index.html">Главная</a>
         </nav>
 
-        <a class="download-button" href="#" aria-label="Скачать приложение в Google Play">
+        <a class="download-button" href="https://play.google.com/store/apps/details?id=com.chico.myhomebookkeeping" aria-label="Скачать приложение в Google Play">
           <svg class="google-play-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path fill="#00A0FF" d="M5.4 3.3c-.5.5-.8 1.2-.8 2.1v21.2c0 .8.3 1.6.8 2.1l.1.1 12-12v-.3L5.5 3.2l-.1.1Z"/>
             <path fill="#00F076" d="m21.4 20.7-4-4v-.3l4-4 .1.1 4.8 2.7c1.4.8 1.4 2 0 2.8l-4.8 2.7h-.1Z"/>
@@ -35,17 +35,13 @@
             <span class="theme-icon" aria-hidden="true">☀</span>
           </button>
 
-          <div class="language-switcher" aria-label="Выбор языка">
-            <button class="language-button is-active" type="button" data-language="ru" aria-pressed="true">Русский</button>
-            <button class="language-button" type="button" data-language="en" aria-pressed="false">
-              <span aria-hidden="true">🇬🇧</span>
-              English
-            </button>
-            <button class="language-button" type="button" data-language="pl" aria-pressed="false">
-              <span aria-hidden="true">🇵🇱</span>
-              Polski
-            </button>
-          </div>
+          <label class="language-field" aria-label="Выбор языка">
+            <select class="language-select" name="language">
+              <option value="ru">Русский</option>
+              <option value="en">🇬🇧 English</option>
+              <option value="pl">🇵🇱 Polski</option>
+            </select>
+          </label>
         </div>
       </div>
     </header>
@@ -71,7 +67,7 @@
         <p data-i18n="paragraph7">Приложение продолжает развиваться — вместе с ним будет развиваться и этот сайт.</p>
 
         <p class="store-copy" data-i18n="storeCopy"><strong>My Home Bookkeeping можно скачать и установить из Google Play:</strong></p>
-        <a class="store-badge" href="#" data-i18n-aria="storeAria" aria-label="Скачать My Home Bookkeeping в Google Play">
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.chico.myhomebookkeeping" data-i18n-aria="storeAria" aria-label="Скачать My Home Bookkeeping в Google Play">
           <svg class="google-play-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path fill="#00A0FF" d="M5.4 3.3c-.5.5-.8 1.2-.8 2.1v21.2c0 .8.3 1.6.8 2.1l.1.1 12-12v-.3L5.5 3.2l-.1.1Z"/>
             <path fill="#00F076" d="m21.4 20.7-4-4v-.3l4-4 .1.1 4.8 2.7c1.4.8 1.4 2 0 2.8l-4.8 2.7h-.1Z"/>
@@ -131,7 +127,7 @@
 
       const root = document.documentElement;
       const themeSwitch = document.querySelector('.theme-switch');
-      const languageButtons = document.querySelectorAll('[data-language]');
+      const languageSelect = document.querySelector('.language-select');
 
       function setTheme(theme) {
         root.dataset.theme = theme;
@@ -151,20 +147,14 @@
           element.setAttribute('aria-label', dictionary[element.dataset.i18nAria]);
         });
 
-        languageButtons.forEach((button) => {
-          const isActive = button.dataset.language === language;
-          button.classList.toggle('is-active', isActive);
-          button.setAttribute('aria-pressed', isActive);
-        });
+        languageSelect.value = language;
       }
 
       themeSwitch.addEventListener('click', () => {
         setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
       });
 
-      languageButtons.forEach((button) => {
-        button.addEventListener('click', () => setLanguage(button.dataset.language));
-      });
+      languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
     </script>
   </body>
 </html>
